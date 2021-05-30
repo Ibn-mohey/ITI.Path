@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="" description="">
+	<nodes>
+		<node id="0" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="playersData" position="(122.0, 315.0)" />
+		<node id="1" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="top20scorrer" position="(120.0, 186.0)" />
+		<node id="2" name="Merge Data" qualified_name="Orange.widgets.data.owmergedata.OWMergeData" project_name="Orange3" version="" title="Merge Data" position="(290.0, 269.0)" />
+		<node id="3" name="Scatter Plot" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" project_name="Orange3" version="" title="Scatter Plot" position="(483.0, 96.0)" />
+		<node id="4" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWDataTable" project_name="Orange3" version="" title="Data Table" position="(378.0, 369.0)" />
+		<node id="5" name="Save Data" qualified_name="Orange.widgets.data.owsave.OWSave" project_name="Orange3" version="" title="Save Data" position="(461.0, 275.0)" />
+	</nodes>
+	<links>
+		<link id="0" source_node_id="1" sink_node_id="2" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="1" source_node_id="0" sink_node_id="2" source_channel="Data" sink_channel="Extra Data" enabled="true" />
+		<link id="2" source_node_id="2" sink_node_id="3" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="3" source_node_id="2" sink_node_id="4" source_channel="Data" sink_channel="Data" enabled="true" />
+		<link id="4" source_node_id="2" sink_node_id="5" source_channel="Data" sink_channel="Data" enabled="true" />
+	</links>
+	<annotations />
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="literal">{'_session_items': [('E:/career/Dataa/github/ITI.Path/data prep/practical 1/playersData.csv', {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 9, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ('E:/career/Dataa/github/ITI.Path/data prep/playersData.csv', {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 9, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''})], 'controlAreaVisible': True, 'dialog_state': {'directory': 'E:/career/Dataa/github/ITI.Path/data prep/practical 1', 'filter': 'Text - comma separated (*.csv, *)'}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x031\x00\x00\x01L\x00\x00\x04N\x00\x00\x02\xa6\x00\x00\x032\x00\x00\x01k\x00\x00\x04M\x00\x00\x02\xa5\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x032\x00\x00\x01k\x00\x00\x04M\x00\x00\x02\xa5', '__version__': 1}</properties>
+		<properties node_id="1" format="literal">{'_session_items': [('E:/career/Dataa/github/ITI.Path/data prep/practical 1/top20scorrer.csv', {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 4, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''}), ('E:/career/Dataa/github/ITI.Path/data prep/top20scorrer.csv', {'encoding': 'utf-8', 'delimiter': ',', 'quotechar': '"', 'doublequote': True, 'skipinitialspace': True, 'quoting': 0, 'columntypes': [{'start': 0, 'stop': 4, 'value': 'Auto'}], 'rowspec': [{'start': 0, 'stop': 1, 'value': 'Header'}], 'decimal_separator': '.', 'group_separator': ''})], 'controlAreaVisible': True, 'dialog_state': {'directory': 'E:/career/Dataa/github/ITI.Path/data prep/practical 1', 'filter': 'Text - comma separated (*.csv, *)'}, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x032\x00\x00\x01k\x00\x00\x04M\x00\x00\x02\xa5\x00\x00\x032\x00\x00\x01k\x00\x00\x04M\x00\x00\x02\xa5\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x032\x00\x00\x01k\x00\x00\x04M\x00\x00\x02\xa5', '__version__': 1}</properties>
+		<properties node_id="2" format="literal">{'auto_apply': True, 'controlAreaVisible': True, 'merging': 1, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02\xf6\x00\x00\x01\x95\x00\x00\x04\x8a\x00\x00\x02{\x00\x00\x02\xf6\x00\x00\x01\x95\x00\x00\x04\x8a\x00\x00\x02{\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x02\xf6\x00\x00\x01\x95\x00\x00\x04\x8a\x00\x00\x02{', '__version__': 2, 'context_settings': []}</properties>
+		<properties node_id="3" format="pickle">gASVPgQAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMC2F1dG9fc2FtcGxllIiMEmNvbnRyb2xBcmVh
+VmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAAJ4AAAA9gAABuUAAAPZ
+AAACeQAAARUAAAbkAAAD2AAAAAAAAAAAB4AAAAJ5AAABFQAABuQAAAPYlIwJc2VsZWN0aW9ulE6M
+EXRvb2x0aXBfc2hvd3NfYWxslIiMBWdyYXBolH2UKIwLYWxwaGFfdmFsdWWUS/+MDWNsYXNzX2Rl
+bnNpdHmUiYwLaml0dGVyX3NpemWUSwCME2xhYmVsX29ubHlfc2VsZWN0ZWSUiYwWb3J0aG9ub3Jt
+YWxfcmVncmVzc2lvbpSJjAtwb2ludF93aWR0aJRLA4wJc2hvd19ncmlklImMC3Nob3dfbGVnZW5k
+lIiMDXNob3dfcmVnX2xpbmWUiXWMC19fdmVyc2lvbl9flEsEjBBjb250ZXh0X3NldHRpbmdzlF2U
+KIwVb3Jhbmdld2lkZ2V0LnNldHRpbmdzlIwHQ29udGV4dJSTlCmBlH2UKIwGdmFsdWVzlH2UKIwK
+YXR0cl9jb2xvcpROSv7///+GlIwKYXR0cl9sYWJlbJROSv7///+GlIwKYXR0cl9zaGFwZZROSv7/
+//+GlIwJYXR0cl9zaXpllE5K/v///4aUjAZhdHRyX3iUjAtBcHBlYXJhbmNlc5RLZoaUjAZhdHRy
+X3mUjA9udW1iZXJfb2ZfZ29hbHOUS2aGlGgIfZRoE0sEdYwKYXR0cmlidXRlc5R9lCiMBFJhbmuU
+SwJoKUsCjAtuYXRpb25hbGl0eZRLAYwJSGVpZ2h0X2NtlEsCaCZLAowEV2luc5RLAowGTG9zc2Vz
+lEsCjA9Hb2Fsc19wZXJfbWF0Y2iUSwKMB0Fzc2lzdHOUSwKMDFllbGxvd19jYXJkc5RLAowJUmVk
+X2NhcmRzlEsCdYwFbWV0YXOUfZSMBE5hbWWUSwNzdWJoGCmBlH2UKGgbfZQojAphdHRyX2NvbG9y
+lE5K/v///4aUjAphdHRyX2xhYmVslE5K/v///4aUjAphdHRyX3NoYXBllE5K/v///4aUjAlhdHRy
+X3NpemWUTkr+////hpSMBmF0dHJfeJSMC0FwcGVhcmFuY2VzlEtmhpSMBmF0dHJfeZSMD251bWJl
+cl9vZl9nb2Fsc5RLZoaUjAVncmFwaJR9lGgTSwR1aCx9lCiMBFJhbmuUSwJoSUsCjAtuYXRpb25h
+bGl0eZRLAYwJSGVpZ2h0X2NtlEsCaEZLAowEV2luc5RLAowGTG9zc2VzlEsCjA9Hb2Fsc19wZXJf
+bWF0Y2iUSwKMB0Fzc2lzdHOUSwKMDFllbGxvd19jYXJkc5RLAowJUmVkX2NhcmRzlEsCdWg3fZSM
+BE5hbWWUSwNzdWJldS4=
+</properties>
+		<properties node_id="4" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'dist_color_RGB': (220, 220, 220, 255), 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\xad\x00\x00\x00\x99\x00\x00\x06\xa5\x00\x00\x03\x18\x00\x00\x01\xae\x00\x00\x00\xb8\x00\x00\x06\xa4\x00\x00\x03\x17\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x01\xae\x00\x00\x00\xb8\x00\x00\x06\xa4\x00\x00\x03\x17', 'select_rows': True, 'selected_cols': [], 'selected_rows': [], 'show_attribute_labels': True, 'show_distributions': False, '__version__': 1}</properties>
+		<properties node_id="5" format="literal">{'add_type_annotations': True, 'auto_save': False, 'controlAreaVisible': True, 'filter': 'Tab-separated values (*.tab)', 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x03Z\x00\x00\x01\xce\x00\x00\x041\x00\x00\x02A\x00\x00\x03Z\x00\x00\x01\xce\x00\x00\x041\x00\x00\x02A\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x03Z\x00\x00\x01\xce\x00\x00\x041\x00\x00\x02A', 'stored_name': 'orangedata.tab', 'stored_path': '.', '__version__': 2}</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>

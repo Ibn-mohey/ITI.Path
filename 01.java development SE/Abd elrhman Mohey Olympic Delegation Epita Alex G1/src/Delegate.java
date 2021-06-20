@@ -8,8 +8,6 @@ public class Delegate {
     public String country;
     private List<Player> players = new ArrayList<Player>();
     private List<Coach> coaches = new ArrayList<Coach>();
-    private int numPlayers;
-    private int numCoachs;
     private int numMedals;
 
 
@@ -20,21 +18,19 @@ public class Delegate {
 
     public void addPlayer(Player player) {
         this.players.add(player);
-        this.numPlayers = this.players.size();
     }
 
     public void addcoach(Coach caoch) {
         this.coaches.add(caoch);
-        this.numCoachs = this.coaches.size();
     }
 
     public int getNumPlayers() {
-        return numPlayers;
+        return this.players.size();
     }
 
     // extra
     public int getNumCoaches() {
-        return numCoachs;
+        return this.coaches.size();
     }
 
     public int getNumMedals(){

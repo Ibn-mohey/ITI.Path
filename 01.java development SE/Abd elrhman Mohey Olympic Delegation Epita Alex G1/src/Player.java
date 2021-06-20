@@ -33,14 +33,12 @@ public class Player extends Person {
 
     public void addMedal(Medal medal) {
         this.medalIDs.add(medal);
-        this.numMedal = this.medalIDs.size();
 
     }
 
     // didnt asked for but i think it's needed
     public int getNumMedal() {
-        this.numMedal = this.medalIDs.size();
-        return numMedal;
+        return this.medalIDs.size();
     }
     public int getPlayerTeam(){
         return this.team.getTeamID();

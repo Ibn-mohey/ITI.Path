@@ -74,11 +74,11 @@ public class PyramidCSVDAO {
 
     //  Build a map from the list of pyramids you have that shows all site-location with the number of pyramids in this site
 
-    public  Map<String, Integer>  mapSiteLocations (List<Pyramid> pyramids)
+    public  Map<String, Integer>  mapSiteLocations ()
     {
         Map<String, Integer> siteCounts = new HashMap<>();
 
-        for (Pyramid p: pyramids)
+        for (Pyramid p: listOfPyramids)
         {
             String site= p.getSite();
             Integer count = siteCounts.get(site);

@@ -11,11 +11,11 @@ public class Main {
         Pdao.sortByHeight();
         // pirnt all pyramids
 
-        int i = 0;
-        for (Pyramid p : listOfPyramids)
-            System.out.println("#" + i++ + p);
+        Pdao.display();
+
         // create the map
         Map siteCount = Pdao.mapSiteLocations(listOfPyramids);
+
         System.out.println(siteCount);
 	// write your code here
     }

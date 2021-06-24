@@ -49,7 +49,6 @@ public class PyramidCSVDAO {
         String modernName = metadata[2];
         String site = metadata[4];
         double height;
-
         if(metadata[7] == null || metadata[7].length() == 0)
         {
             height = 0;}
@@ -57,8 +56,6 @@ public class PyramidCSVDAO {
         {
             height = Double.parseDouble(metadata[7]);
         }
-
-
         return new Pyramid(pharoah, modernName, site, height);
     }
 
@@ -98,7 +95,7 @@ public class PyramidCSVDAO {
 
     // showpyramids
 
-    public void display(List<Pyramid> listOfPyramids)
+    public void display()
     {
         int i = 0;
         for (Pyramid p : listOfPyramids)

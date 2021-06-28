@@ -3,12 +3,12 @@ public class Country {
     private String countryCode;
     private String countryName;
     private String continent;
-    private long population;
+    private double population;
     private double surfaceArea;
     private double gnp;
     private int capitalId;
 
-    public Country(String countryCode, String countryName, String continent, long population, double surfaceArea, double gnp, int capitalId) {
+    public Country(String countryCode, String countryName, String continent, double population, double surfaceArea, double gnp, int capitalId) {
         this.countryCode = countryCode;
         this.countryName = countryName;
         this.continent = continent;
@@ -30,7 +30,7 @@ public class Country {
         return continent;
     }
 
-    public long getPopulation() {
+    public double getPopulation() {
         return population;
     }
 

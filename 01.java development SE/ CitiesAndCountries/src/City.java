@@ -32,7 +32,7 @@ public class City
                 "cityName='" + cityName + '\'' +
                 ", cityNumber=" + cityNumber +
                 ", cityPopulation=" + cityPopulation +
-                ", cityCode='" + countryCode + '\'' +
+                ", countryCode='" + countryCode + '\'' +
                 '}';
     }
 }

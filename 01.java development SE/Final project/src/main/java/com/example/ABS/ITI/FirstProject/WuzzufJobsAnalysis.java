@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FinalJavaProjectIttApplication {
+public class WuzzufJobsAnalysis {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FinalJavaProjectIttApplication.class, args);
+		SpringApplication.run(WuzzufJobsAnalysis.class, args);
 	}
 
 }

@@ -1,13 +1,13 @@
-package com.example.ABS.ITI.FirstProject;
+package ITI.AIpro.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FinalJavaProjectIttApplication {
+public class WuzzufDataAnalysisJavaProjectApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FinalJavaProjectIttApplication.class, args);
+		SpringApplication.run(WuzzufDataAnalysisJavaProjectApplication.class, args);
 	}
 
 }

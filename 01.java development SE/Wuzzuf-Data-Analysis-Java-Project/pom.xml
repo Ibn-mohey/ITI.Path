@@ -8,11 +8,11 @@
 		<version>2.5.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example.ABS.ITI</groupId>
-	<artifactId>FirstProject</artifactId>
+	<groupId>ITI.AIpro</groupId>
+	<artifactId>demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>FinalJavaProjectITT</name>
-	<description>this is a project that was made at the end of  the java and uml course at ITI the AI pro programe </description>
+	<name>Wuzzuf-Data-Analysis-Java-Project</name>
+	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>

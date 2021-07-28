@@ -1,10 +1,10 @@
-package com.example.ABS.ITI.FirstProject;
+package ITI.AIpro.demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class FinalJavaProjectIttApplicationTests {
+class WuzzufDataAnalysisJavaProjectApplicationTests {
 
 	@Test
 	void contextLoads() {

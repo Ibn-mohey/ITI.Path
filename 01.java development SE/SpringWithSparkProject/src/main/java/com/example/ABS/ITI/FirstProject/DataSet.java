@@ -79,7 +79,7 @@ public class DataSet {
 //    public List<Row> head(int n)
     public String head(int n)
     {
-        String headValues = jobsDF.showString(10,40,false);
+        String headValues = jobsDF.showString(n,40,false);
 
 //        List<String[]> headValuesStrings = new ArrayList<>();
 //        for(Row row : headValues) {
@@ -310,6 +310,7 @@ public class DataSet {
         Dataset<Row> mDatasetFactorized = jobsDF.withColumn("YearExp_Factorized",
                 regexp_replace(trim(regexp_replace(jobsDF.col("YearsExp"), "[A-Za-z]", "")), "^$", "0"));
         Dataset<Row> yearsOfExp = mDatasetFactorized.select("YearsExp","YearExp_Factorized");
+        if( n > yearsOfExp.count()){ n =(int) yearsOfExp.count();}
         return yearsOfExp.showString(n,40,false);
     }
 
@@ -318,7 +319,7 @@ public class DataSet {
 //    12. Apply K-means for job title and companies (Bounce )
 
 
-    public String kMeansAlgorithm()
+    public String kMeansAlgorithm(int n)
     {
         Dataset<Row> dataset = jobsDF.as("data");
         String[] cols = {"Title", "Company"};
@@ -339,7 +340,7 @@ public class DataSet {
         vectorAssembler.setInputCols(factorizedCols).setOutputCol("features");
         Dataset<Row> trainData = vectorAssembler.transform(dataset);
 
-        KMeans kmeans = new KMeans().setK(3).setSeed(1L);
+        KMeans kmeans = new KMeans().setK(n).setSeed(1L);
         kmeans.setFeaturesCol("features");
         KMeansModel model = kmeans.fit(trainData);
 

@@ -138,8 +138,8 @@ public class DataSet {
         for (int i = 0; i < companies.size() ; i++)
             chart.addSeries(companies.get(i), Integer.parseInt(counts.get(i)));
 
-        BitmapEncoder.saveBitmap(chart, "src/main/resources/company_pie_chart.JPG", BitmapEncoder.BitmapFormat.JPG);
-        return new Pair<String, String>( groupedByCompany.showString(n,40,false), "src/main/resources/company_pie_chart.JPG");
+        BitmapEncoder.saveBitmap(chart, "src/main/resources/company_pie_chart"+n+".JPG", BitmapEncoder.BitmapFormat.JPG);
+        return new Pair<String, String>( groupedByCompany.showString(n,40,false), "src/main/resources/company_pie_chart"+n+".JPG");
     }
 
     public List<Row> getMostDemandingCompanies(int n)
@@ -177,8 +177,8 @@ public class DataSet {
         chart.getStyler().setStacked(true);
         chart.addSeries("Locations", titles, toFloats);
 
-        BitmapEncoder.saveBitmap(chart, "src/main/resources/title_bar_chart.png", BitmapEncoder.BitmapFormat.PNG);
-        return  new Pair<String, String>( groupedByCompany.showString(n,40,false), "src/main/resources/title_bar_chart.png") ;
+        BitmapEncoder.saveBitmap(chart, "src/main/resources/title_bar_chart"+n+".png", BitmapEncoder.BitmapFormat.PNG);
+        return  new Pair<String, String>( groupedByCompany.showString(n,40,false), "src/main/resources/title_bar_chart"+n+".png") ;
     }
 
 
@@ -206,8 +206,8 @@ public class DataSet {
         chart.getStyler().setStacked(true);
         chart.addSeries("Locations", Areas, toFloats);
 
-        BitmapEncoder.saveBitmap(chart, "src/main/resources/Areas_Bar_chart.png", BitmapEncoder.BitmapFormat.PNG);
-        return new Pair<String, String>( groupByLocations.showString(n,40,false), "src/main/resources/Areas_Bar_chart.png");
+        BitmapEncoder.saveBitmap(chart, "src/main/resources/Areas_Bar_chart"+n+".png", BitmapEncoder.BitmapFormat.PNG);
+        return new Pair<String, String>( groupByLocations.showString(n,40,false), "src/main/resources/Areas_Bar_chart"+n+".png");
     }
 
 
@@ -245,7 +245,7 @@ public class DataSet {
 
             for(int i = 0; i <n;i++)
             {
-               Wen += ("#" + (i) + " - " + skillsCounts.get(i).getKey() + " : " + skillsCounts.get(i).getValue()) + "\n";
+               Wen += ("#" + (i+1) + " - " + skillsCounts.get(i).getKey() + " : " + skillsCounts.get(i).getValue()) + "\n";
             }
 //        List<String> SkillsList =new ArrayList<>();
 //        List<Long> SkillCount =new ArrayList<>();

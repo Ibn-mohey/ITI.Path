@@ -81,14 +81,6 @@ public class DataSet {
     {
         String headValues = jobsDF.showString(n,40,false);
 
-//        List<String[]> headValuesStrings = new ArrayList<>();
-//        for(Row row : headValues) {
-//            String[] eachrow = row.toString()
-//                    .replace("]", "").replace("[", "")
-//                    .split(",", jobsDF.columns().length);
-//            headValuesStrings.add(eachrow);
-//        }
-//        List<String> listOne = jobsDF.map(row -> row.mkString(), Encoders.STRING()).collectAsList();
         return headValues;
         // showstring
     }
@@ -101,17 +93,9 @@ public class DataSet {
         return structure.prettyJson();
     }
 
-//    public  List<Row> getSummary()
-//    {
-//        Dataset<Row> str = jobsDF.summary();
-//        List<Row> SummaryList = str.collectAsList();
-//        return SummaryList;
-//        //
-//}
     public String getSummary()
     {
-//        Dataset<Row> str =
-////        List<Row> SummaryList = str.collectAsList();
+
         return jobsDF.summary().showString(1,40,false) +"\n" + "The data has no max no min So no Summary";
         //
     }
@@ -119,8 +103,7 @@ public class DataSet {
 //4. Count the jobs for each company and display that in order
 //            (What are the most demanding companies for jobs?
     //5. Show step 4 in a pie chart
-//    Pair<Integer, String>
-//    public String plotCompanyPieChart(int n) throws IOException
+
     public Pair<String, String> plotCompanyPieChart(int n) throws IOException
     {
         Dataset<Row> groupedByCompany = jobsDF.groupBy("Company")
@@ -226,6 +209,7 @@ public class DataSet {
                     .trim()
                     .split(","))
                     .iterator());
+
             skills = skills.flatMap(skill ->
                     Arrays.asList(skill.trim()
                             .toLowerCase()
@@ -247,49 +231,7 @@ public class DataSet {
             {
                Wen += ("#" + (i+1) + " - " + skillsCounts.get(i).getKey() + " : " + skillsCounts.get(i).getValue()) + "\n";
             }
-//        List<String> SkillsList =new ArrayList<>();
-//        List<Long> SkillCount =new ArrayList<>();
-//        for (int i = skillsCounts.size()-1; i>0; i--) {
-//            SkillsList.add((String) skillsCounts.get(i).getKey());
-//            SkillCount.add((Long) skillsCounts.get(i).getValue());
-//        }
-
-//        Map<String,Long> oneMap = new HashMap<>();
-
-//        for (int i = skillsCounts.size()-1; i>0; i--) {
-//            oneMap.put((String) skillsCounts.get(i).getKey(), (Long) skillsCounts.get(i).getValue());
-//        }
-//        LinkedHashMap<String, Long> sortedMap = new LinkedHashMap<>();
-//        oneMap.entrySet()
-//                .stream()
-//                .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
-//                .forEachOrdered(x -> sortedMap.put(x.getKey(), x.getValue()));
-
-
-
-
-//        ObjectMapper objectMapper = new ObjectMapper();
-//        String json = objectMapper.writeValueAsString(sortedMap);
-
-//        JSONObject jsonObject = new JSONObject(json);
-//        JavaConverters.asScalaIteratorConverter(inputList.iterator()).asScala().toSeq()
-//        Dataset<Row> finalDF = oneMap.toSeq.toDF('namd','count')
 //
-//        List<String> skillsName = new ArrayList<>();
-//        List<String> skillsCount = new ArrayList<>();
-//        for(Map.Entry entry : skillsCounts){
-//            skillsName.add(entry.getKey().toString());
-//            skillsCount.add(entry.getValue().toString());
-//        }
-
-//        Dataset<Row> skillsNameDF = sparkSession.createDataset(skillsName, Encoders.STRING()).toDF();
-//        Dataset<Row> skillsCountDF = sparkSession.createDataset(skillsName, Encoders.STRING()).toDF();
-//        Dataset<Row>  All =  skillsNameDF.columns.toSet ++ skillsCountDF.columns.toSet
-//        df.withColumn('Count',skillsCount);
-//        Dataset<Row> ds = sparkSession.;
-
-
-
         return Wen;
     }
 
@@ -299,14 +241,7 @@ public class DataSet {
 
     public String getFactorizedYearsOfExp(int n)
     {
-//        Dataset<Row> factorizedYears = new StringIndexer()
-//                .setInputCol("YearsExp")
-//                .setOutputCol("FactorizedYears")
-//                .fit(jobsDF)
-//                .transform(jobsDF);
 //
-//        String[] cols = {"YearsExp", "FactorizedYears"};
-//        Dataset<Row> yearsOfExp = factorizedYears.select("YearsExp", "FactorizedYears");
         Dataset<Row> mDatasetFactorized = jobsDF.withColumn("YearExp_Factorized",
                 regexp_replace(trim(regexp_replace(jobsDF.col("YearsExp"), "[A-Za-z]", "")), "^$", "0"));
         Dataset<Row> yearsOfExp = mDatasetFactorized.select("YearsExp","YearExp_Factorized");
@@ -340,7 +275,7 @@ public class DataSet {
         vectorAssembler.setInputCols(factorizedCols).setOutputCol("features");
         Dataset<Row> trainData = vectorAssembler.transform(dataset);
 
-        KMeans kmeans = new KMeans().setK(n).setSeed(1L);
+        KMeans kmeans = new KMeans().setK(n).setSeed(1);
         kmeans.setFeaturesCol("features");
         KMeansModel model = kmeans.fit(trainData);
 

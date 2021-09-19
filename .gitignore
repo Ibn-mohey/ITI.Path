@@ -215,3 +215,8 @@ data prep/practical 1/.ipynb_checkpoints/Scraping play ground-checkpoint.ipynb
 data prep/practical 1/chromedriver 93 _win32.zip
 16.ML 2/Day 3/.ipynb_checkpoints/Mohey Naive_Bayes-checkpoint.ipynb
 16.ML 2/Day 3/.ipynb_checkpoints/Mixture_models_em_for_gmm-checkpoint.ipynb
+15.ML 1/Bike Sharing Demand/.ipynb_checkpoints/Some Models Tries-checkpoint.ipynb
+*.tsv
+*.tfevents
+15.ML 1/Bike Sharing Demand/catboost_info/catboost_training.json
+15.ML 1/Bike Sharing Demand/bike-sharing-demand.zip

@@ -1,0 +1,19 @@
+mkdir c:\data\server1
+mkdir c:\data\server2
+mkdir c:\data\server3
+mongod --replSet s0 --dbpath c:\data\server1 --port 37017
+mongod --replSet s0 --dbpath c:\data\server2 --port 37018
+mongod --replSet s0 --dbpath c:\data\server3 --port 37019
+mongosh --port 37017
+	rs.initiate();
+	rs.add("127.0.0.1:37018");
+	rs.add("127.0.0.1:37019");
+	rs.status();
+MongoDBCompass
+	mongodb://localhost:37017/
+	(import zips.json to 37017)
+	mongodb://localhost:37018/
+	mongodb://localhost:37018/?readPreference=secondary
+	mongodb://localhost:37017,localhost:37018,localhost:37019/?replicaSet=s0&readPreference=nearest
+	(kill 37017, modify data, connect to others separately)
+	(rerun 37017, check rs.status(), connect to it separately, see modified data)

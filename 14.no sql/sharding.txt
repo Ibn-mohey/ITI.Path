@@ -1,0 +1,95 @@
+config server cluster
+	mkdir c:\data\sharding\cnf0
+	mkdir c:\data\sharding\cnf1
+	mkdir c:\data\sharding\cnf2
+	mongod --configsvr --replSet s_cnf --dbpath c:\data\sharding\cnf0 --bind_ip localhost --port 37050
+	mongod --configsvr --replSet s_cnf --dbpath c:\data\sharding\cnf1 --bind_ip localhost --port 37051
+	mongod --configsvr --replSet s_cnf --dbpath c:\data\sharding\cnf2 --bind_ip localhost --port 37052
+	mongosh --host localhost --port 37050
+		rs.initiate(
+		  {
+			_id: "s_cnf",
+			configsvr: true,
+			members: [
+			  { _id : 0, host : "localhost:37050" },
+			  { _id : 1, host : "localhost:37051" },
+			  { _id : 2, host : "localhost:37052" }
+			]
+		  }
+		);
+		rs.status();
+		
+		
+		
+		
+1st shard replicaset
+	mkdir c:\data\sharding\shard1\srv0
+	mkdir c:\data\sharding\shard1\srv1
+	mkdir c:\data\sharding\shard1\srv2
+	mongod --shardsvr --replSet s_shrd1 --dbpath c:\data\sharding\shard1\srv0 --bind_ip localhost --port 37160
+	mongod --shardsvr --replSet s_shrd1 --dbpath c:\data\sharding\shard1\srv1 --bind_ip localhost --port 37161
+	mongod --shardsvr --replSet s_shrd1 --dbpath c:\data\sharding\shard1\srv2 --bind_ip localhost --port 37162
+	mongosh --host localhost --port 37160
+		rs.initiate(
+		  {
+			_id : "s_shrd1",
+			members: [
+			  { _id : 0, host : "localhost:37160" },
+			  { _id : 1, host : "localhost:37161" },
+			  { _id : 2, host : "localhost:37162" }
+			]
+		  }
+		);
+		rs.status();
+		
+		
+		
+		
+2nd shard replicaset
+	mkdir c:\data\sharding\shard2\srv0
+	mkdir c:\data\sharding\shard2\srv1
+	mkdir c:\data\sharding\shard2\srv2
+	mongod --shardsvr --replSet s_shrd2 --dbpath c:\data\sharding\shard2\srv0 --bind_ip localhost --port 37260
+	mongod --shardsvr --replSet s_shrd2 --dbpath c:\data\sharding\shard2\srv1 --bind_ip localhost --port 37261
+	mongod --shardsvr --replSet s_shrd2 --dbpath c:\data\sharding\shard2\srv2 --bind_ip localhost --port 37262
+	mongosh --host localhost --port 37260
+		rs.initiate(
+		  {
+			_id : "s_shrd2",
+			members: [
+			  { _id : 0, host : "localhost:37260" },
+			  { _id : 1, host : "localhost:37261" },
+			  { _id : 2, host : "localhost:37262" }
+			]
+		  }
+		);
+		rs.status();
+		
+		
+		
+		
+Router
+	mongos --configdb s_cnf/localhost:37050,localhost:37051,localhost:37052 --bind_ip localhost --port 37040
+	mongosh --host localhost --port 37040
+		sh.addShard( "s_shrd1/localhost:37160,localhost:37161,localhost:37162");
+		sh.addShard( "s_shrd2/localhost:37260,localhost:37261,localhost:37262");
+		sh.enableSharding("mflix")
+		sh.shardCollection("mflix.movies", { "year" : "hashed" } )
+		sh.shardCollection("mflix.movies", { "year" : 1 } )
+	
+	
+Import Data through Router
+	mongorestore --host=localhost --port 37040 -d mflix -c movies json\movies.bson
+
+
+Connect to Router from MongoDBCompass
+	mongodb://localhost:37040/
+	EXPLAIN {"title":"Carmencita"}
+	EXPLAIN {"year":"1999"}
+
+
+
+Connect to a single shard only
+	mongodb://localhost:37160,localhost:37161,localhost:37162/?replicaSet=s_shrd1&readPreference=nearest
+	EXPLAIN {"year":"1955"}
+	EXPLAIN {"year":"1999"}

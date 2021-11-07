@@ -252,3 +252,78 @@ data prep/practical 1/chromedriver 93 _win32.zip
 18.Pyspark/Day 1/Assignment/Sols/pyspark_HW_session1-عبد الرحمن علاء الدين فتحي.ipynb
 18.Pyspark/Day 1/Assignment/Sols/sample1.txt
 18.Pyspark/Day 1/Assignment/Sols/walmart_stock.csv
+18.Pyspark/Day 2/Data/DataFrames_sample.json
+18.Pyspark/Day 2/Data/ITI_data.csv
+18.Pyspark/Day 2/Data/test1.csv
+18.Pyspark/Day 2/Data/test3.csv
+18.Pyspark/Day 2/Session_2_H_W_AmrAhmedG1 (1).ipynb
+18.Pyspark/Day 2/Session_2_H_W_AmrAhmedG1.ipynb
+18.Pyspark/Day 3/H_W_Session_ccc33cعبد الرحمن علاء الدين فتحي.ipynb
+18.Pyspark/Day 3/sols/csvFiles/test3 - Copy (2).csv
+18.Pyspark/Day 3/sols/csvFiles/test3 - Copy (3).csv
+18.Pyspark/Day 3/sols/csvFiles/test3 - Copy (4).csv
+18.Pyspark/Day 3/sols/csvFiles/test3 - Copy.csv
+18.Pyspark/Day 3/sols/csvFiles/test3.csv
+18.Pyspark/Day 3/sols/H_W_Session_ccc33cعبد الرحمن علاء الدين فتحي (2).ipynb
+18.Pyspark/Day 3/sols/H_W_Session_ccc33cعبد الرحمن علاء الدين فتحي.ipynb
+18.Pyspark/Day 3/sols/test3.csv
+18.Pyspark/Day 3/test3.csv
+*.delta
+18.Pyspark/Practical/checkpoint/commits/0
+18.Pyspark/Practical/checkpoint/commits/1
+18.Pyspark/Practical/checkpoint/commits/2
+18.Pyspark/Practical/checkpoint/metadata
+18.Pyspark/Practical/checkpoint/offsets/0
+18.Pyspark/Practical/checkpoint/offsets/1
+18.Pyspark/Practical/checkpoint/offsets/2
+18.Pyspark/Practical/checkpoint/sources/0/0
+18.Pyspark/Practical/checkpoint/sources/0/1
+18.Pyspark/Practical/checkpoint/sources/0/2
+18.Pyspark/Practical/chkpnt/82a634dc-1742-4851-be0d-ad586d7efe44/connected-components-d96d6d59/2/._SUCCESS.crc
+18.Pyspark/Practical/chkpnt/82a634dc-1742-4851-be0d-ad586d7efe44/connected-components-d96d6d59/2/.part-00000-a6fa64df-1599-405e-b748-9054da726781-c000.snappy.parquet.crc
+18.Pyspark/Practical/chkpnt/82a634dc-1742-4851-be0d-ad586d7efe44/connected-components-d96d6d59/2/.part-00006-a6fa64df-1599-405e-b748-9054da726781-c000.snappy.parquet.crc
+18.Pyspark/Practical/chkpnt/82a634dc-1742-4851-be0d-ad586d7efe44/connected-components-d96d6d59/2/.part-00036-a6fa64df-1599-405e-b748-9054da726781-c000.snappy.parquet.crc
+18.Pyspark/Practical/chkpnt/82a634dc-1742-4851-be0d-ad586d7efe44/connected-components-d96d6d59/2/.part-00043-a6fa64df-1599-405e-b748-9054da726781-c000.snappy.parquet.crc
+18.Pyspark/Practical/chkpnt/82a634dc-1742-4851-be0d-ad586d7efe44/connected-components-d96d6d59/2/.part-00140-a6fa64df-1599-405e-b748-9054da726781-c000.snappy.parquet.crc
+18.Pyspark/Practical/chkpnt/82a634dc-1742-4851-be0d-ad586d7efe44/connected-components-d96d6d59/2/.part-00196-a6fa64df-1599-405e-b748-9054da726781-c000.snappy.parquet.crc
+18.Pyspark/Practical/chkpnt/82a634dc-1742-4851-be0d-ad586d7efe44/connected-components-d96d6d59/2/_SUCCESS
+*.parquet
+18.Pyspark/Practical/Data.rar
+18.Pyspark/Practical/Data/AABA_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/AAPL_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/all_stocks_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/all_stocks_2017-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/AMZN_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/AXP_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/BA_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/CAT_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/CSCO_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/CVX_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/DIS_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/GE_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/GOOGL_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/GS_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/HD_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/IBM_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/INTC_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/JNJ_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/JPM_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/KO_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/MCD_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/MMM_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/MRK_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/MSFT_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/NKE_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/PFE_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/PG_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/TRV_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/UNH_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/UTX_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/VZ_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/WMT_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Data/XOM_2006-01-01_to_2018-01-01.csv
+18.Pyspark/Practical/Practical_Work_3_Streaming_and_GraphFrames_AmrAhmed_Final.ipynb
+18.Pyspark/Practical/Practical_work_Ali_Mohamed.ipynb
+18.Pyspark/Practical/Practical_work_Muhammed_Abojabal.ipynb
+18.Pyspark/Practical/test.csv
+18.Pyspark/Practical/train.csv
